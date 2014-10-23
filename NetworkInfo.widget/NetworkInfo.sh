@@ -11,7 +11,8 @@ exportService() {
   echo '  {'
   echo '    "name":"'$1'",'
   echo '    "ipaddress":"'${ip}'",'
-  echo '    "macaddress":"'${mac}'"'
+  echo '    "macaddress":"'${mac}'",'
+  echo '    "ssid":"'${ssid}'"'
   echo '  }'
 }
 
@@ -35,6 +36,7 @@ echo '  ,'
 # Output the Wi-Fi information.
 ip=$(/usr/sbin/networksetup -getinfo wi-fi | grep -Ei '(^IP address:)' | awk '{print $3}')
 mac=$(/usr/sbin/networksetup -getinfo wi-fi | grep -Ei '(^Wi-Fi ID:)' | awk '{print $3}')
+ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I | egrep ' +SSID' | sed 's/.*SSID: //')
 exportService "wi-fi"
 
 # End the JSON

@@ -1,0 +1,3 @@
+[submodule "ubersicht-github.git"]
+	path = ubersicht-github.git
+	url = git@github.com:chrismetcalf/ubersicht-github.git

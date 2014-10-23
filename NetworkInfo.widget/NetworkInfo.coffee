@@ -33,7 +33,8 @@ update: (output, domEl) ->
       html += "  <p class='primaryInfo'>" + svc.ipaddress + "</p>"
 
     # Show the Mac Address.
-    html += "  <p class='secondaryInfo'>" + svc.macaddress + "</p>"
+    if svc.macaddress && svc.macaddress != '(null)'
+      html += "  <p class='secondaryInfo'>" + svc.macaddress + "</p>"
 
     # Show the SSID, if applicable
     if svc.ssid != ''

@@ -43,8 +43,8 @@ update: (output, domEl) ->
 style: """
   margin:0
   padding:0px
-  left:10px
-  top: 10px
+  right:20px
+  bottom: 20px
   color: #fff
 
   .service

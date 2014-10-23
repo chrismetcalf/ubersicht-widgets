@@ -14,7 +14,7 @@ render: (o) -> """
     <div class='temp'></div>
     <div class='summary'></div>
   </div>
-  <div class='forecast'></div>
+  <!--<div class='forecast'></div>-->
 """
 
 update: (output, domEl) ->
@@ -49,7 +49,7 @@ renderForecast: (data) ->
 
 style: """
   bottom: 25px
-  left: 200px
+  left: 150px
   color: #fff
   font-family: Helvetica Neue
   text-align: center

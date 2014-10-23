@@ -25,16 +25,16 @@ endJSON() {
 startJSON
 
 # Output the Ethernet information.
-ip=$(networksetup -getinfo ethernet | grep -Ei '(^IP address:)' | awk '{print $3}')
-mac=$(networksetup -getinfo ethernet | grep -Ei '(^Ethernet address:)' | awk '{print $3}')
+ip=$(/usr/sbin/networksetup -getinfo 'usb ethernet' | grep -Ei '(^IP address:)' | awk '{print $3}')
+mac=$(/usr/sbin/networksetup -getinfo 'usb ethernet' | grep -Ei '(^Ethernet address:)' | awk '{print $3}')
 exportService "ethernet"
 
 # Place a comma between services.
 echo '  ,'
 
 # Output the Wi-Fi information.
-ip=$(networksetup -getinfo wi-fi | grep -Ei '(^IP address:)' | awk '{print $3}')
-mac=$(networksetup -getinfo wi-fi | grep -Ei '(^Wi-Fi ID:)' | awk '{print $3}')
+ip=$(/usr/sbin/networksetup -getinfo wi-fi | grep -Ei '(^IP address:)' | awk '{print $3}')
+mac=$(/usr/sbin/networksetup -getinfo wi-fi | grep -Ei '(^Wi-Fi ID:)' | awk '{print $3}')
 exportService "wi-fi"
 
 # End the JSON

@@ -47,9 +47,9 @@ update: (output, domEl) ->
 
 # CSS Style
 style: """
-  margin:0
-  padding:0px
-  right:20px
+  margin: 0
+  padding: 0px
+  right: 170px
   bottom: 20px
   color: #fff
 

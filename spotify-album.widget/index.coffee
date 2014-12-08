@@ -35,13 +35,14 @@ style: """
   bottom: 20px
   right: 10px
   color: #fff
+  max-width: 130px
 
   .album-art
     border: 2px white solid
     border-radius: 2px
     transform: rotate(5deg)
     margin-bottom: 10px
-    margin-left: 20px
+    margin-right: 15px
 
   .currently-playing
     font-family: Helvetica Neue

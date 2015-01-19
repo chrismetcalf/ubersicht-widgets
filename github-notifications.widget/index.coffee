@@ -15,14 +15,11 @@ enterprise: enterprise
 refreshFrequency: 15000
 
 style: """
-  right: 10px;
-  bottom: 10px;
+  left: 750px;
+  bottom: 120px;
 
   .github-notifications {
-    border: 1px solid #333;
-    border-radius: 10px;
     padding: 10px;
-    background-color: #E5E5E5;
   }
 
   .enterprise {
@@ -41,7 +38,7 @@ style: """
   }
 
   .octicon {
-    font: normal normal normal 24px/1 octicons;
+    font: normal normal normal 18px/1 octicons;
     display: inline-block;
     text-decoration: none;
     text-rendering: auto;
@@ -51,6 +48,7 @@ style: """
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: white
   }
 
   sub {
@@ -60,14 +58,13 @@ style: """
 
   .count-group {
     display: inline-block;
-    width: 50px;
+    width: 30px;
     font-size: 24px;
     text-align: center;
   }
 
   .count-group + .count-group {
     padding-left: 5px;
-    border-left: 1px solid #CCC;
   }
 
   .count {
